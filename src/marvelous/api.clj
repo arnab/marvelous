@@ -7,9 +7,9 @@
 
 (defn- fetch-from-api
   "fetches data from Marvel's API"
-  [limit offset]
+  [resource limit offset]
   (http/get
-   (str base-url "characters") {
+   (str base-url resource) {
     :query-params {
      :limit limit
      :offset offset
@@ -22,5 +22,5 @@
   (json/read-str s))
 
 (defn fetch
-  [limit offset]
-  (parse (:body (fetch-from-api limit offset))))
+  [resource limit offset]
+  (parse (:body (fetch-from-api resource limit offset))))
