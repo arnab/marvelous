@@ -1,6 +1,8 @@
-(ns marvelous.core)
+(ns marvelous.core
+  [:require [marvelous.api :as api]])
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(defn run
+  []
+  (api/fetch))
+
+#_ (run)
