@@ -7,9 +7,10 @@
   []
   ;; 3 super heroes
   ;; 2 events
-  ;; one story
+  ;; 1 story
   (let [cs (characters/rand 3)
         es (events/rand 2)]
-    (println [cs es])))
+    (println cs)
+    (println es)))
 
 #_ (plot)
